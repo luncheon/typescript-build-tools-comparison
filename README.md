@@ -26,25 +26,26 @@ Preact + Material UI を利用しており、 `'react'` モジュールを `'pre
 
 平均は取っていません。
 
-| ビルドツール                                                 | ビルド時間 |
-| ------------------------------------------------------------ | ---------: |
-| esbuild                                                      |      0.18s |
-| webpack キャッシュなし                                       |      4.49s |
-| webpack ファイルシステムキャッシュあり ファイル変更なし      |      1.70s |
-| webpack ファイルシステムキャッシュあり ファイル変更あり      |      7.98s |
-| Parcel キャッシュなし                                        |      9.37s |
-| Parcel ファイルシステムキャッシュあり ファイル変更なし       |      1.00s |
-| Parcel ファイルシステムキャッシュあり ファイル変更あり       |      1.70s |
-| rollup.js + rollup-plugin-esbuild + rollup-plugin-terser     |      4.33s |
-| rollup.js + @rollup/plugin-typescript + rollup-plugin-terser |      4.69s |
-| rollup.js + @rollup/plugin-sucrase + rollup-plugin-terser    |      4.68s |
-| Snowpack + @snowpack/plugin-webpack                          |     10.36s |
+| ビルドツール                                                 | ビルド時間 | バンドルサイズ |
+| ------------------------------------------------------------ | ---------: | -------------: |
+| esbuild                                                      |      0.18s |         154285 |
+| webpack キャッシュなし                                       |      4.49s |         157070 |
+| webpack ファイルシステムキャッシュあり ファイル変更なし      |      1.70s |         157070 |
+| webpack ファイルシステムキャッシュあり ファイル変更あり      |      7.98s |         157070 |
+| Parcel キャッシュなし                                        |      9.37s |         733417 |
+| Parcel ファイルシステムキャッシュあり ファイル変更なし       |      1.00s |         733417 |
+| Parcel ファイルシステムキャッシュあり ファイル変更あり       |      1.70s |         733417 |
+| Parcel キャッシュなし --experimental-scope-hoisting          |      9.10s |         171444 |
+| rollup.js + rollup-plugin-esbuild + rollup-plugin-terser     |      4.33s |         146987 |
+| rollup.js + @rollup/plugin-sucrase + rollup-plugin-terser    |      4.68s |         147550 |
+| rollup.js + @rollup/plugin-typescript + rollup-plugin-terser |      4.69s |         146991 |
+| Snowpack + @snowpack/plugin-webpack                          |     10.36s |         146765 |
 
 Material UI を利用することでバンドルサイズを大きくしていますが、 Material UI のコードは TypeScript のトランスパイル対象ではありません（.d.ts ファイル + .js ファイルで公開されているため）。トランスパイル対象が大きい場合は結果が変わってくるかもしれません。
 
 ## 所感
 
-私は基本的に esbuild をおすすめします。とにかく速いです。
+私は esbuild をおすすめします。とにかく速いです。
 
 以下 esbuild v0.5.2 現在の残念な点です。これらよりビルドパフォーマンスが優先されるなら esbuild が第一候補になります。
 
