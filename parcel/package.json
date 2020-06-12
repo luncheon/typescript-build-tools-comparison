@@ -6,6 +6,7 @@
   "scripts": {
     "build": "parcel build index.html --out-file parcel.html --out-dir ../dist --public-url . --no-source-maps --no-cache",
     "build:cached": "parcel build index.html --out-file parcel.html --out-dir ../dist --public-url . --no-source-maps",
+    "build:experimental-scope-hoisting": "parcel build index.html --out-file parcel.html --out-dir ../dist --public-url . --no-source-maps --no-cache --experimental-scope-hoisting",
     "watch": "parcel index.html --out-file parcel.html --out-dir ../dist --public-url . --no-source-maps"
   },
   "devDependencies": {
