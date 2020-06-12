@@ -17,6 +17,7 @@
     "install:esbuild": "cd esbuild && npm ci",
     "install:webpack": "cd webpack && npm ci",
     "install:parcel": "cd parcel && npm ci",
+    "install:parcel2": "cd parcel2 && npm ci",
     "install:rollup-esbuild": "cd rollup-esbuild && npm ci",
     "install:rollup-sucrase": "cd rollup-sucrase && npm ci",
     "install:rollup-typescript": "cd rollup-typescript && npm ci",
@@ -25,6 +26,7 @@
     "build:esbuild": "cd esbuild && npm run build | gnomon",
     "build:webpack": "cd webpack && npm run build | gnomon",
     "build:parcel": "cd parcel && npm run build | gnomon",
+    "build:parcel2": "cd parcel2 && npm run build | gnomon",
     "build:rollup-esbuild": "cd rollup-esbuild && npm run build | gnomon",
     "build:rollup-sucrase": "cd rollup-sucrase && npm run build | gnomon",
     "build:rollup-typescript": "cd rollup-typescript && npm run build | gnomon",
@@ -35,6 +37,7 @@
     "watch:esbuild": "cd esbuild && npm run watch",
     "watch:webpack": "cd webpack && npm run watch",
     "watch:parcel": "cd parcel && npm run watch",
+    "watch:parcel2": "cd parcel2 && npm run watch",
     "watch:rollup-esbuild": "cd rollup-esbuild && npm run watch",
     "watch:rollup-sucrase": "cd rollup-sucrase && npm run watch",
     "watch:rollup-typescript": "cd rollup-typescript && npm run watch"
