@@ -1,0 +1,10 @@
+{
+  "scripts": {
+    "build": "node build.js",
+    "watch": "node build.js -w"
+  },
+  "devDependencies": {
+    "esbuild": "^0.5.2",
+    "sane": "^4.1.0"
+  }
+}

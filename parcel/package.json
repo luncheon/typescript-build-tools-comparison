@@ -1,0 +1,14 @@
+{
+  "alias": {
+    "react": "preact/compat",
+    "react-dom": "preact/compat"
+  },
+  "scripts": {
+    "build": "parcel build index.html --out-file parcel.html --out-dir ../dist --public-url . --no-source-maps --no-cache",
+    "build:cached": "parcel build index.html --out-file parcel.html --out-dir ../dist --public-url . --no-source-maps",
+    "watch": "parcel index.html --out-file parcel.html --out-dir ../dist --public-url . --no-source-maps"
+  },
+  "devDependencies": {
+    "parcel-bundler": "^1.12.4"
+  }
+}

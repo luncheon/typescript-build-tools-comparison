@@ -1,0 +1,56 @@
+<body>
+  <style>
+    body {
+      margin: 0;
+      padding: 16px 32px;
+      display: grid;
+      grid-gap: 32px;
+      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    }
+    h3 {
+      margin: 0;
+    }
+    section {
+      display: inline-block;
+    }
+    iframe {
+      border: 1px solid #ccc;
+      width: 100%;
+    }
+  </style>
+
+  <section>
+    <h3>esbuild</h3>
+    <iframe src="dist/esbuild.html"></iframe>
+  </section>
+
+  <section>
+    <h3>webpack</h3>
+    <iframe src="dist/webpack.html"></iframe>
+  </section>
+
+  <section>
+    <h3>parcel</h3>
+    <iframe src="dist/parcel.html"></iframe>
+  </section>
+
+  <section>
+    <h3>snowpack</h3>
+    <iframe src="dist/snowpack.html"></iframe>
+  </section>
+
+  <section>
+    <h3>@rollup/plugin-typescript</h3>
+    <iframe src="dist/rollup-typescript.html"></iframe>
+  </section>
+
+  <section>
+    <h3>@rollup/plugin-sucrase</h3>
+    <iframe src="dist/rollup-sucrase.html"></iframe>
+  </section>
+
+  <section>
+    <h3>rollup-plugin-esbuild</h3>
+    <iframe src="dist/rollup-esbuild.html"></iframe>
+  </section>
+</body>

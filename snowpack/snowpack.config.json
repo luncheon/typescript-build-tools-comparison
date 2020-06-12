@@ -1,0 +1,14 @@
+{
+  "extends": "@snowpack/app-scripts-react",
+  "scripts": {
+    "mount:../src": "mount ../src --to /_parent_src_"
+  },
+  "plugins": [["@snowpack/plugin-webpack"]],
+  "installOptions": {
+    "alias": { "react": "preact/compat", "react-dom": "preact/compat" }
+  },
+  "devOptions": {
+    "out": "../dist/",
+    "fallback": "snowpack.html"
+  }
+}

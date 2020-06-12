@@ -1,0 +1,55 @@
+{
+  "name": "typescript-build-tools-comparison",
+  "version": "0.0.0",
+  "license": "Good Boy License",
+  "private": true,
+  "prettier": {
+    "printWidth": 140,
+    "endOfLine": "lf",
+    "singleQuote": true,
+    "trailingComma": "all",
+    "semi": false,
+    "arrowParens": "avoid"
+  },
+  "scripts": {
+    "install": "npm-run-all -s install:*",
+    "install:snowpack": "cd snowpack && npm ci",
+    "install:esbuild": "cd esbuild && npm ci",
+    "install:webpack": "cd webpack && npm ci",
+    "install:parcel": "cd parcel && npm ci",
+    "install:rollup-esbuild": "cd rollup-esbuild && npm ci",
+    "install:rollup-sucrase": "cd rollup-sucrase && npm ci",
+    "install:rollup-typescript": "cd rollup-typescript && npm ci",
+    "build": "npm-run-all -s build:*",
+    "build:snowpack": "cd snowpack && npm run build | gnomon",
+    "build:esbuild": "cd esbuild && npm run build | gnomon",
+    "build:webpack": "cd webpack && npm run build | gnomon",
+    "build:parcel": "cd parcel && npm run build | gnomon",
+    "build:rollup-esbuild": "cd rollup-esbuild && npm run build | gnomon",
+    "build:rollup-sucrase": "cd rollup-sucrase && npm run build | gnomon",
+    "build:rollup-typescript": "cd rollup-typescript && npm run build | gnomon",
+    "build:cached:webpack": "cd webpack && npm run build:cached | gnomon",
+    "build:cached:parcel": "cd parcel && npm run build:cached | gnomon",
+    "build:cached": "npm-run-all -s build:cached:*",
+    "watch:snowpack": "cd snowpack && npm run watch",
+    "watch:esbuild": "cd esbuild && npm run watch",
+    "watch:webpack": "cd webpack && npm run watch",
+    "watch:parcel": "cd parcel && npm run watch",
+    "watch:rollup-esbuild": "cd rollup-esbuild && npm run watch",
+    "watch:rollup-sucrase": "cd rollup-sucrase && npm run watch",
+    "watch:rollup-typescript": "cd rollup-typescript && npm run watch"
+  },
+  "dependencies": {
+    "@material-ui/core": "^4.10.2",
+    "preact": "^10.4.4"
+  },
+  "devDependencies": {
+    "@babel/core": "^7.10.2",
+    "@types/react": "^16.9.36",
+    "@types/react-dom": "^16.9.8",
+    "gnomon": "^1.5.0",
+    "npm-run-all": "^4.1.5",
+    "prettier": "^2.0.5",
+    "typescript": "^3.9.5"
+  }
+}

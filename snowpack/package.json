@@ -1,0 +1,12 @@
+{
+  "scripts": {
+    "watch": "snowpack dev",
+    "build": "snowpack build"
+  },
+  "devDependencies": {
+    "@snowpack/app-scripts-react": "^1.1.4",
+    "@snowpack/plugin-webpack": "^1.1.5",
+    "snowpack": "^2.2.0",
+    "typescript": "^3.8.0"
+  }
+}
