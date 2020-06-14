@@ -3,11 +3,10 @@ import commonjs from '@rollup/plugin-commonjs'
 import html from '@rollup/plugin-html'
 import resolve from '@rollup/plugin-node-resolve'
 import replace from '@rollup/plugin-replace'
-import sucrase from '@rollup/plugin-sucrase'
-import path from 'path'
 import { terser } from 'rollup-plugin-terser'
 
-const name = path.basename(__dirname)
+const transpiler = process.env.transpiler || 'typescript'
+const name = `rollup-${transpiler}`
 
 export default {
   input: '../src/index.tsx',
@@ -26,10 +25,17 @@ export default {
       },
     }),
     replace({ 'process.env.NODE_ENV': '"production"' }),
-    sucrase({
-      exclude: ['node_modules/**'],
-      transforms: ['typescript', 'jsx'],
-    }),
+    transpiler === 'typescript' &&
+      require('@rollup/plugin-typescript')({
+        tsconfig: '../tsconfig.json',
+        include: ['../src/**/*.ts', '../src/**/*.tsx'],
+      }),
+    transpiler === 'sucrase' &&
+      require('@rollup/plugin-sucrase')({
+        exclude: ['node_modules/**'],
+        transforms: ['typescript', 'jsx'],
+      }),
+    transpiler === 'esbuild' && require('rollup-plugin-esbuild')(),
     terser({ warnings: true }),
     html({ fileName: `${name}.html` }),
   ],
