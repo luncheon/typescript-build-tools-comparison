@@ -32,8 +32,8 @@ export default {
       }),
     transpiler === 'sucrase' &&
       require('@rollup/plugin-sucrase')({
-        exclude: ['node_modules/**'],
         transforms: ['typescript', 'jsx'],
+        include: ['../src/**/*.ts', '../src/**/*.tsx'],
       }),
     transpiler === 'esbuild' && require('rollup-plugin-esbuild')(),
     terser({ warnings: true }),
