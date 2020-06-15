@@ -4,7 +4,7 @@
     "watch": "node build.js -w"
   },
   "devDependencies": {
-    "esbuild": "^0.5.2",
+    "esbuild": "^0.5.3",
     "sane": "^4.1.0"
   }
 }
