@@ -11,7 +11,7 @@ Preact + Material UI を利用しており、 `'react'` モジュールを `'pre
   https://webpack.js.org/
 - Parcel  
   https://parceljs.org/
-- rollup.js  
+- Rollup  
   https://rollupjs.org/
   - rollup-plugin-esbuild  
     https://github.com/egoist/rollup-plugin-esbuild
@@ -26,20 +26,20 @@ Preact + Material UI を利用しており、 `'react'` モジュールを `'pre
 
 平均は取っていません。
 
-| ビルドツール                                                   | ビルド時間 | バンドルサイズ |
-| -------------------------------------------------------------- | ---------: | -------------: |
-| esbuild                                                        |      0.18s |         154285 |
-| webpack キャッシュなし                                         |      4.49s |         157070 |
-| webpack ファイルシステムキャッシュあり ファイル変更なし        |      1.70s |         157070 |
-| webpack ファイルシステムキャッシュあり ファイル変更あり        |      7.98s |         157070 |
-| Parcel キャッシュなし                                          |      9.37s |         733417 |
-| Parcel ファイルシステムキャッシュあり ファイル変更なし         |      1.00s |         733417 |
-| Parcel ファイルシステムキャッシュあり ファイル変更あり         |      1.70s |         733417 |
-| Parcel キャッシュなし --experimental-scope-hoisting            |      9.10s |         171444 |
-| rollup.js + @rollup/plugin-typescript@2 + rollup-plugin-terser |      4.69s |         146991 |
-| rollup.js + @rollup/plugin-sucrase + rollup-plugin-terser      |      4.68s |         147550 |
-| rollup.js + rollup-plugin-esbuild + rollup-plugin-terser       |      4.33s |         146987 |
-| Snowpack + @snowpack/plugin-webpack                            |     10.36s |         146765 |
+| ビルドツール                                                | ビルド時間 | バンドルサイズ |
+| ----------------------------------------------------------- | ---------: | -------------: |
+| esbuild                                                     |      0.18s |         154285 |
+| webpack キャッシュなし                                      |      4.49s |         157070 |
+| webpack ファイルシステムキャッシュあり ファイル変更なし     |      1.70s |         157070 |
+| webpack ファイルシステムキャッシュあり ファイル変更あり     |      7.98s |         157070 |
+| Parcel キャッシュなし                                       |      9.37s |         733417 |
+| Parcel ファイルシステムキャッシュあり ファイル変更なし      |      1.00s |         733417 |
+| Parcel ファイルシステムキャッシュあり ファイル変更あり      |      1.70s |         733417 |
+| Parcel キャッシュなし --experimental-scope-hoisting         |      9.10s |         171444 |
+| Rollup + @rollup/plugin-typescript@2 + rollup-plugin-terser |      4.69s |         146991 |
+| Rollup + @rollup/plugin-sucrase + rollup-plugin-terser      |      4.68s |         147550 |
+| Rollup + rollup-plugin-esbuild + rollup-plugin-terser       |      4.33s |         146987 |
+| Snowpack + @snowpack/plugin-webpack                         |     10.36s |         146765 |
 
 Material UI を利用することでバンドルサイズを大きくしていますが、 Material UI のコードは TypeScript のトランスパイル対象ではありません（.d.ts ファイル + .js ファイルで公開されているため）。トランスパイル対象が大きい場合は結果が変わってくるかもしれません。
 
