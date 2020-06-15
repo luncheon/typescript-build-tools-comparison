@@ -29,13 +29,15 @@
     "build:rollup-esbuild": "cd rollup && npm run build:esbuild | gnomon",
     "build:rollup-sucrase": "cd rollup && npm run build:sucrase | gnomon",
     "build:rollup-typescript": "cd rollup && npm run build:typescript | gnomon",
+    "build:rollup-babel": "cd rollup && npm run build:babel | gnomon",
     "watch:snowpack": "cd snowpack && npm run watch",
     "watch:esbuild": "cd esbuild && npm run watch",
     "watch:webpack": "cd webpack && npm run watch",
     "watch:parcel": "cd parcel && npm run watch",
     "watch:rollup-esbuild": "cd rollup && npm run watch:esbuild",
     "watch:rollup-sucrase": "cd rollup && npm run watch:sucrase",
-    "watch:rollup-typescript": "cd rollup && npm run watch:typescript"
+    "watch:rollup-typescript": "cd rollup && npm run watch:typescript",
+    "watch:rollup-babel": "cd rollup && npm run watch:babel"
   },
   "dependencies": {
     "@material-ui/core": "^4.10.2",

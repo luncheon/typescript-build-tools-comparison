@@ -1,14 +1,19 @@
 {
   "scripts": {
     "build:typescript": "rollup -c",
+    "build:babel": "rollup -c --environment transpiler:babel",
     "build:sucrase": "rollup -c --environment transpiler:sucrase",
     "build:esbuild": "rollup -c --environment transpiler:esbuild",
     "watch:typescript": "rollup -c -w",
+    "watch:babel": "rollup -c --environment transpiler:babel -w",
     "watch:sucrase": "rollup -c --environment transpiler:sucrase -w",
     "watch:esbuild": "rollup -c --environment transpiler:esbuild -w"
   },
   "devDependencies": {
+    "@babel/preset-react": "^7.10.1",
+    "@babel/preset-typescript": "^7.10.1",
     "@rollup/plugin-alias": "^3.1.1",
+    "@rollup/plugin-babel": "^5.0.3",
     "@rollup/plugin-commonjs": "^13.0.0",
     "@rollup/plugin-html": "^0.2.0",
     "@rollup/plugin-node-resolve": "^8.0.1",

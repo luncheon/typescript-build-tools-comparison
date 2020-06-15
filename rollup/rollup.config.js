@@ -30,6 +30,13 @@ export default {
         tsconfig: '../tsconfig.json',
         include: ['../src/**/*.ts', '../src/**/*.tsx'],
       }),
+    transpiler === 'babel' &&
+      require('@rollup/plugin-babel').default({
+        presets: ['@babel/preset-typescript', '@babel/preset-react'],
+        include: ['../src/**/*.ts', '../src/**/*.tsx'],
+        extensions: ['.ts', '.tsx'],
+        babelHelpers: 'bundled',
+      }),
     transpiler === 'sucrase' &&
       require('@rollup/plugin-sucrase')({
         transforms: ['typescript', 'jsx'],
