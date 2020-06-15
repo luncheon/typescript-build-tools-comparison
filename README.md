@@ -40,7 +40,7 @@ Preact + Material UI を利用しており、 `'react'` モジュールを `'pre
 | Parcel キャッシュなし --experimental-scope-hoisting         |      8.81s |         171444 |
 | Rollup + @rollup/plugin-typescript@2 + rollup-plugin-terser |      4.56s |         146991 |
 | Rollup + @rollup/plugin-babel + rollup-plugin-terser        |      4.68s |         146991 |
-| Rollup + @rollup/plugin-sucrase + rollup-plugin-terser      |       4.39 |         147550 |
+| Rollup + @rollup/plugin-sucrase + rollup-plugin-terser      |      4.39s |         147550 |
 | Rollup + rollup-plugin-esbuild + rollup-plugin-terser       |      4.28s |         146987 |
 | Snowpack + @snowpack/plugin-webpack                         |      8.07s |         146765 |
 
