@@ -59,6 +59,11 @@ npm run build
 
 エントリポイントは `src/index.tsx` です。ソースコードを変えてビルドを試す場合はこのファイルを書き換えてください。
 
+## ブログ記事
+
+- [Web フロントエンド] esbuild が爆速すぎて webpack / Rollup にはもう戻れない | Kabuku Developers Blog  
+  https://www.kabuku.co.jp/developers/ultrafast-tsx-build-tool-esbuild
+
 ## ライセンス
 
 Good Boy License
